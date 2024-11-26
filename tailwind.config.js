@@ -17,8 +17,9 @@ export default {
       },
       colors: {
         mainColor: '#131920',
+        mainColorTwo: '#0E1316',
         whitemainColor: '#3A4C61',
-        qaymoqColor: '#A99A4D'
+        qaymoqColor: '#D5C261'
       },
       screens: {
         sm: '365px',
