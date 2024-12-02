@@ -12,13 +12,13 @@ function BurgerMenu({ open, close }) {
         <div
             className={`fixed top-[56px] left-0 w-full h-auto bg-mainColor  overflow-y-auto
             transform transition-transform duration-300 ease-in-out ${open
-            ? 'translate-y-0 z-40' : '-translate-y-full -z-40'
-        }`}
+                    ? 'translate-y-0 z-40' : 'translate-y-[-500px] -z-40'
+                }`}
         >
             <nav className="flex flex-col items-center w-full text-center">
                 <div
                     onClick={() => handleNavigate('/about')}
-                    className="py-[20px] px-[23px] w-[100%] border-[#D7D7D7]
+                    className="py-[20px] px-[23px] cursor-pointer w-[100%] border-[#D7D7D7]
                      border-y flex items-center justify-start"
                 >
                     <span className="text-white text-lg">
@@ -27,7 +27,7 @@ function BurgerMenu({ open, close }) {
                 </div>
                 <div
                     onClick={() => handleNavigate('/rooms')}
-                    className="py-[20px] px-[23px] w-[100%] border-[#D7D7D7]
+                    className="py-[20px] px-[23px] cursor-pointer w-[100%] border-[#D7D7D7]
                      border-b flex items-center justify-start"
                 >
                     <span className="text-white text-lg">
@@ -36,7 +36,7 @@ function BurgerMenu({ open, close }) {
                 </div>
                 <div
                     onClick={() => handleNavigate('/service')}
-                    className="py-[20px] px-[23px] w-[100%] border-[#D7D7D7]
+                    className="py-[20px] px-[23px] cursor-pointer w-[100%] border-[#D7D7D7]
                      border-b flex items-center justify-start"
                 >
                     <span className="text-white text-lg">
@@ -45,7 +45,7 @@ function BurgerMenu({ open, close }) {
                 </div>
                 <div
                     onClick={() => handleNavigate('/contact')}
-                    className="py-[20px] px-[23px] w-[100%] border-[#D7D7D7]
+                    className="py-[20px] px-[23px] cursor-pointer w-[100%] border-[#D7D7D7]
                     border-b flex items-center justify-start"
                 >
                     <span className="text-white text-lg">

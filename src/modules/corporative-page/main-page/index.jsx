@@ -3,8 +3,10 @@ import HeroBg from '../../../static/images/hotelHeroBg.jpg'
 import { InfoCard } from './components/InfoCard'
 import HotelCafe from '../../../static/images/hotelCafe.jpg'
 import HotelRoom from '../../../static/images/hotelRoom.jpg'
+import { useNavigate } from 'react-router-dom'
 
 export const MainPage = () => {
+    const navigate = useNavigate()
     return (
         <>
             <div className="lg:max-w-[1440px] lg:m-auto">
@@ -90,7 +92,7 @@ export const MainPage = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className='flex py-[10px] px-[20px] border border-white rounded-[15px] items-center gap-[10px]'>
+                        <div onClick={() => navigate('/rooms')} className='flex cursor-pointer py-[10px] px-[20px] border border-white rounded-[15px] items-center gap-[10px]'>
                             <span className='text-white font-[300]'>View All Rooms</span>
                             <span className='text-white'>{<ArrowRight />}</span>
                         </div>
@@ -117,7 +119,7 @@ export const MainPage = () => {
                                 <span className='sm:text-[16px] lg:text-[35px] lg:w-[70%] sm:w-[80%] font-[600] text-white'>Delicious Food Awaken your Taste Buds</span>
                                 <span className='sm:text-[14px] lg:w-[80%] font-normal text-white'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio incidunt molestias nihil! Quos temporibus totam, distinctio exercitationem veniam odio</span>
                             </div>
-                            <div className='flex py-[10px] px-[15px] border border-white rounded-[14px] items-center gap-[10px]'>
+                            <div onClick={() => navigate('/about')} className='flex cursor-pointer py-[10px] px-[15px] border border-white rounded-[14px] items-center gap-[10px]'>
                                 <span className='text-white font-normal text-[14px]'>Read More</span>
                                 <span className='text-white'>{<ArrowRight />}</span>
                             </div>

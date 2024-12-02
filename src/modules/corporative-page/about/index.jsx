@@ -4,6 +4,8 @@ import HotelSpa from '../../../static/images/hotelSpa.webp'
 import HotelWedding from '../../../static/images/hotelWedding.jpg'
 import HotelBar from '../../../static/images/hotelBar.jpg'
 import HotelRes from '../../../static/images/hotelRes.webp'
+import HotelWindow from '../../../static/images/hotelWindows.jpg'
+import { useNavigate } from 'react-router-dom'
 
 const cardData = [
     {
@@ -33,6 +35,7 @@ const cardData = [
 ]
 
 export const About = () => {
+    const navigate = useNavigate()
     return (
         <>
             <div className="lg:max-w-[1440px] lg:m-auto">
@@ -47,7 +50,7 @@ export const About = () => {
                             />
                         </div>
                         <div className='absolute inset-0 flex flex-col items-center sm:gap-[20px] lg:gap-[25px] justify-center w-[100%]'>
-                            <span className='lg:text-[56px] sm:text-[24px] text-center font-[700] font-serif text-qaymoqColor'>About The Hotel</span>
+                            <span className='lg:text-[56px] px-[25px] py-[10px] border-4 border-white rounded-bl-[15px] rounded-tr-[15px] sm:text-[24px] text-center font-[700] font-serif text-qaymoqColor'>ABOUT THE HOTEL</span>
                             <span className='text-[14px] font-normal text-white text-center sm:w-[80%] lg:w-[40%]'>Looking for comfortable and convienent place to rent.</span>
                         </div>
                     </div>
@@ -82,6 +85,41 @@ export const About = () => {
                         {cardData?.map((item) => (
                             <AnimatedCard title={item.title} img={item.img} bioText={item.bioText} bioTitle={item.bioTitle} />
                         ))}
+                    </div>
+                </section>
+                <section>
+                    <div className='flex relative flex-col items-center justify-center'>
+                        <div className="w-[100%] sm:h-[800px] md:h-[450px] lg:h-[600px] overflow-hidden relative">
+                            <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+                            <img
+                                src={HotelWindow}
+                                alt="img of the hotel outer"
+                                className="w-[100%] h-[100%] object-cover animate-grow-shrink"
+                            />
+                        </div>
+                        <div className='absolute flex sm:flex-col px-[24px] lg:flex-row  inset-0 items-center sm:gap-[40px] lg:gap-[45px] justify-center w-[100%]'>
+                            <div className='flex flex-col items-start gap-[15px]'>
+                                <span className='sm:text-[14px] lg:text-[16px] text-white font-normal font-serif'>____RESERVATION ROOM</span>
+                                <span className='sm:text-[25px] lg:text-[35px] sm:w-[100%] lg:w-[70%] font-serif text-white'>Book directly with us today
+                                    to enjoy special offers</span>
+                                <span className='text-white sm:text-[14px] sm:w-[100%] lg:w-[70%] lg:text-[16px] font-[300] '>Exclusive hotel deals when you book directly on our website. Ut enim ad minim veniam, quis nostrud exercitation</span>
+                            </div>
+                            <div className='sm:w-[100%] lg:w-[35%] flex flex-col gap-[30px] justify-center sm:py-[30px] lg:py-[50px] sm:px-[15px] lg:px-[40px] bg-white'>
+                                <div className='flex flex-col items-start gap-[7px] pb-[15px] border-b border-mainColor/50'>
+                                    <span className='text-mainColor sm:text-[20px] font-[500] font-serif lg:text-[20px]'>Best Price Guarantee</span>
+                                    <span className='text-mainColor/50 sm:text-[14px]'>Up to 30% off when booking directly</span>
+                                </div>
+                                <div className='flex flex-col items-start gap-[7px] pb-[15px] border-b border-mainColor/50'>
+                                    <span className='text-mainColor sm:text-[20px] font-[500] font-serif lg:text-[20px]'>Priority for Room Upgrade</span>
+                                    <span className='text-mainColor/50 sm:text-[14px]'>You will be upgraded and lowered your room for free within 24 hours from the time of booking</span>
+                                </div>
+                                <div className='flex flex-col items-start gap-[7px]'>
+                                    <span className='text-mainColor sm:text-[20px] font-[500] font-serif lg:text-[20px]'>10% Discount on Food</span>
+                                    <span className='text-mainColor/50 sm:text-[14px]'>Enjoy dining at special prices for direct bookings room (excluding buffets)</span>
+                                </div>
+                                <button onClick={() => navigate('/contact')} className='border hover:text-white hover:bg-mainColor transition-all duration-300 ease-in-out border-mainColor py-[10px] px-[20px] text-mainColor text-[14px] font-normal font-serif'>CONTACT US</button>
+                            </div>
+                        </div>
                     </div>
                 </section>
             </div >
