@@ -28,10 +28,6 @@ export const RoomCard = ({ img, title, id }) => {
                         </div>
                     </div>
                     <div className='w-auto flex items-center justify-start gap-[50px]'>
-                        <div className='flex py-[10px] bg-white px-[15px] border border-white items-center justify-center gap-[10px]'>
-                            <span className='text-mainColor sm:hidden lg:block'>---</span>
-                            <span className='text-mainColor font-normal'>BOOK NOW</span>
-                        </div>
                         <div onClick={() => navigate(`/room/${id}`)} className='flex cursor-pointer py-[10px] px-[30px] border border-white items-center justify-center gap-[10px]'>
                             <span className='text-white sm:hidden lg:block'>---</span>
                             <span className='text-white font-normal'>DETAILS</span>
